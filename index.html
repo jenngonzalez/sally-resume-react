@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Resume of Sally Skellington including work history, education, and contact info.">
+    <title>Sally's Student Resume</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Raleway|Rock+Salt" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="application-root"></div>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    crossorigin>
+    </script>
+    <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script type="text/babel">
+
+     function App(props) {
+         console.log(props)
+         return (
+           <div>
+           {props.children}
+           </div>
+         )
+     }
+
+
+     ReactDOM.render (
+        <App className="my-class">
+         <header>
+            <h1>Sally Skellington's Student Resume</h1>
+         </header>
+         <main>
+          <div class="flex-container">
+          <section id="contact-info">
+                <h2>Contact Information</h2>
+                <address>
+                Sally Skellington • <a href="mailto:sallyskellington@gmail.com?Subject=Hello Sally!" target="_top">sallyskellington@gmail.com</a> • 206-555-9627
+                </address>
+                <br></br>
+                <img src="https://vignette.wikia.nocookie.net/thenightmarebeforechristmas/images/b/b9/SallyInfobox.jpg/revision/latest?cb=20161207175704" alt="A Photo of Sally Skellington"></img>
+            </section>
+          <section class="education-employment">
+            <section id="education">
+                <h2>Education</h2>
+                <h3>Bachelor of Arts - Macabre University, 1995</h3>
+            </section>
+            <section id="employment">
+                <h2>Employment History</h2>
+                <h3>Dr. Finkelstein's Laboratory</h3>
+                    <h4>Lab Assistant, 1993-1995</h4>
+                    <p>Assisted with various medical procedures, performed light housekeeping duties and seamstress work, prepared meals</p>
+                <h3>Halloween Town Hall</h3>
+                    <h4>Pumpkin Queen, 1995-Present</h4>
+                    <p>Perform various political duties, oversee funding and setup for various townwide events, make-up and set design for said events</p>
+            </section>
+            </section>
+            </div>
+         </main>
+        </App>,
+        document.querySelector('#application-root')
+     );
+
+
+
+    </script>
+  </body>
+</html>
